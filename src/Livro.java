@@ -3,16 +3,27 @@ public class Livro{
     private EstadoLivro emprestado;
     private EstadoLivro reservado;
     private EstadoLivro manutencao;
-
     private EstadoLivro estadoAtual;
+    private String titulo;
+    private String autor;
 
-    public Livro() {
+    public Livro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
         this.disponivel = new LivroDisponivel();
         this.emprestado = new LivroEmprestado();
         this.reservado = new LivroReservado();
         this.manutencao = new LivroManutencao();
 
         this.estadoAtual = this.disponivel;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public String getTitulo() {
+        return titulo;
     }
 
     //metodo para mudar o estado

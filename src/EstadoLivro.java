@@ -8,4 +8,5 @@ public interface EstadoLivro {
      void enviarParaReparo(Livro livro);
 
      void concluirReparo(Livro livro);
+
 }

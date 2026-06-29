@@ -12,8 +12,8 @@ public class LivroEmprestado implements EstadoLivro {
     }
     @Override
     public void reservar(Livro livro) {
-        System.out.println("Livro emprestado no momento, mas já foi reservado!");
-        livro.definirEstado(livro.getReservado());
+        System.out.println("Livro emprestado no momento!");
+        livro.definirEstado(livro.getEmprestado());
     }
 
     @Override
