@@ -1,18 +1,18 @@
 public class LivroManutencao implements EstadoLivro {
     @Override
-    public void emprestar(Livro livro) {
+    public void emprestar(Livro livro, Usuario usuario) {
         System.out.println("Livro em manunteção. Indisponivel para emprestimo");
         livro.definirEstado(livro.getManutencao());
     }
 
     @Override
-    public void devolver(Livro livro) {
+    public void devolver(Livro livro, Usuario usuario) {
         System.out.println("Livro em manutenção!");
         livro.definirEstado(livro.getManutencao());
     }
 
     @Override
-    public void reservar(Livro livro){
+    public void reservar(Livro livro,  Usuario usuario) {
         System.out.println("Livro em manunteção. Indisponivel para reserva");
         livro.definirEstado(livro.getManutencao());
     }

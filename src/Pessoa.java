@@ -4,6 +4,13 @@ public abstract class Pessoa {
     private int cpf;
     private String matricula;
 
+    public Pessoa(String nome, String matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+    }
+
+    public abstract void interagirComBiblioteca(String acao, Livro livro);
+
     public String getNome() {
         return nome;
     }

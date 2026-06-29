@@ -1,16 +1,18 @@
 public class Main {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
+        Pessoa usuario1 = new Usuario("Pedro Cardoso", "12344213");
 
-        System.out.println("busque um livro");
         Livro livroEscolhido = biblioteca.buscarPorTitulo("Dom Casmurro");
 
         if(livroEscolhido != null){
-            System.out.println("Estado inicial:" + livroEscolhido.getEstadoAtual().getClass().getSimpleName());
+            usuario1.interagirComBiblioteca("emprestar", livroEscolhido);
 
-            livroEscolhido.emprestar();
-            livroEscolhido.reservar();
-            livroEscolhido.devolver();
+            Usuario userObj = (Usuario) usuario1;
+            System.out.println("Livro em mãos do " + userObj.getNome() + ": " + userObj.getMatricula());
+
+            //devolvendo o livro
+            usuario1.interagirComBiblioteca("devolver", livroEscolhido);
 
         }
     }

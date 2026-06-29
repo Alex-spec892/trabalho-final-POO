@@ -32,16 +32,16 @@ public class Livro{
     }
 
     //this é usado para referenciar qual livro em questão está sendo alterado o estado
-    public void emprestar() {
-        estadoAtual.emprestar(this);
+    public void emprestar(Usuario usuario) {
+        estadoAtual.emprestar(this, usuario);
     }
 
-    public void devolver() {
-        estadoAtual.devolver(this);
+    public void devolver(Usuario usuario) {
+        estadoAtual.devolver(this, usuario);
     }
 
-    public void reservar() {
-        estadoAtual.reservar(this);
+    public void reservar(Usuario usuario) {
+        estadoAtual.reservar(this, usuario);
     }
 
     public void enviarParaReparo() {
